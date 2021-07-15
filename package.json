@@ -1,0 +1,22 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "Desafio I - Hiring Coders",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soniamarasa/landing-page.git"
+  },
+  "author": "Sônia mara de Sá",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soniamarasa/landing-page/issues"
+  },
+  "homepage": "https://github.com/soniamarasa/landing-page#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  }
+}
