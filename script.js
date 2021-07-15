@@ -1,18 +1,61 @@
-var date = new Date('november 26, 2021').getTime();
+const date = new Date('november 26, 2021').getTime();
 
-var bxDays = document.getElementById('days');
-var bxHours = document.getElementById('hours');
-var bxMinutes = document.getElementById('minutes');
-var bxSeconds = document.getElementById('seconds');
+const bxDays = document.getElementById('days');
+const bxHours = document.getElementById('hours');
+const bxMinutes = document.getElementById('minutes');
+const bxSeconds = document.getElementById('seconds');
 
-var days, hours, minutes, seconds;
+let days, hours, minutes, seconds;
 
-var regressiva = document.getElementById('regressiva');
 
-setInterval(function () {
-  var currentDate = new Date().getTime();
+window.addEventListener('load', () => { 
+
+    dates()
+})
+
+function dates() {
+  let todayIs = document.getElementById('todayIs');
+  let date = new Date();
+  let day = date.getDate();
+  let weeklyDay = date.getDay();
+  let month = date.getMonth();
+  let year = date.getFullYear();
+
+  let weeklyDayName = [
+    ' domingo',
+    ' segunda-feira',
+    ' terça-feira',
+    ' quarta-feira',
+    ' quinta-feira',
+    ' sexta-feira',
+    ' sábado',
+  ];
+
+  let monthName = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro',
+  ];
+
+  let WeeklyName = weeklyDayName[weeklyDay];
+
+  todayIs.textContent =
+    WeeklyName + ', ' + day + ' de ' + monthName[month] + ' de ' + year;
+}
+
+setInterval(() => {
+  let currentDate = new Date().getTime();
   seconds = (date - currentDate) / 1000;
-  
+
   days = parseInt(seconds / 86400);
   seconds = seconds % 86400;
   hours = parseInt(seconds / 3600);
