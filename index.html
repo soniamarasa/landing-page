@@ -15,11 +15,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans+SC&family=Zen+Tokyo+Zoo&display=swap"
         rel="stylesheet">
+   
     <title>Óticas Pasquim</title>
     <link rel="icon" href="/img/icon.png" />
 </head>
 
 <body>
+
     <header class="content">
         <div class="row">
 
@@ -37,7 +39,6 @@
                     <a id="login" href="#">
                         <button class=" btn-icons" type="button"><i class="fas fa-user-alt"></i></button>
                         <p> <span> Olá, faça o seu login</span> <span id="minhaConta"> Minha Conta </span> </p>
-
                     </a>
                 </div>
 
@@ -48,7 +49,7 @@
 
     </header>
 
-    <div class="principal">
+    <div class="corpo">
 
         <div id="blackFriday">
             <h1>BLACK </h1>
@@ -56,9 +57,9 @@
         </div>
 
 
-        <div class="container">
+        <div>
             <div>
-                <p> Hoje é <span id="todayIs"></span></p>
+                <h6> Hoje é <span id="todayIs"></span></h6>
             </div>
             <p id="timerT">Faltam</p>
             <div id="timer" class="row">
@@ -124,21 +125,56 @@
 
         </div>
 
+
+        <div id="produtos">
+            <h4>Produtos com até 50% de desconto</h4>
+            <div class="produtos">
+                <div class="row first">
+                    <div class="col-3">
+                        <img src="/img/oc1.png" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="/img/oc2.png" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="/img/oc3.png" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="/img/oc4.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <img src="/img/oc5.png" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="/img/oc6.png" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="/img/oc7.png" alt="">
+                    </div>
+                    <div class="col-3">
+                        <img src="/img/oc7.png" alt="">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
     </div>
 
     <footer>
         <!-- <div> -->
         <div class="row footer">
-            <div class="col-12 col-sm-6 col-md-3">
-                <ul>
-                    <li> <a href="">Nossas Lojas</a></li>
-                    <li> <a href="">Ajuda</a></li>
-                    <li> <a href="">Duvidas</a></li>
-                    <li> <a href="">Serviços</a></li>
-                    <li> <a href="">Institucional</a></li>
-                </ul>
-            </div>
-            <div class="col-12 col-sm-6  col-md-3">
+            <!-- <div class="col-12 col-sm-6 col-md-3">
+                <h5>LINKS</h5>
+              
+            </div> -->
+            <div class="col-12 col-sm-4  col-md-4">
                 <h5>ATENDIMENTO</h5>
                 <h3> 4000-1234 </h3>
                 <p> Para clientes de Internet e Televendas </p>
@@ -148,11 +184,17 @@
 
                 <a href="">Fale pelo Whatsapp </a>
             </div>
-            <div class="col-12 col-sm-6  col-md-3">
+
+            <div class="col-12 col-sm-4  col-md-4">
                 <h5>FORMAS DE PAGAMENTO</h5>
-                <img src="/img/Formasdepagamento.png" alt="">
+
+                <div id="fPag">
+                    <img src="/img/Formasdepagamento.png" alt="">
+                </div>
+
             </div>
-            <div class="col-12 col-sm-6  col-md-3">
+
+            <div class="col-12 col-sm-4  col-md-4">
                 <h5>REDES SOCIAIS</h5>
                 <div id="redesSociais">
                     <a href=""><i class="fab fa-instagram"></i></a>
@@ -161,17 +203,43 @@
                     <a href=""><i class="fab fa-pinterest"></i></a>
                 </div>
 
+                <hr>
+                <div>
+                    <ul>
+                        <li> <a href="">Nossas Lojas</a></li>
+                        <li> <a href="">Ajuda</a></li>
+                        <li> <a href="">Dúvidas</a></li>
+                        <li> <a href="">Serviços</a></li>
+                        <li> <a href="">Institucional</a></li>
+                    </ul>
+                </div>
+
             </div>
 
-
         </div>
-        <div id="dBy"> Todos os Direitos Reservados - Desenvolvido por <a href="https://soniamarasa.github.io/">Sônia
-                Mara de Sá</a> </div>
+
+        <div class="row" id="dBy">
+            <div class="col">
+                <span>
+                    Todos os Direitos Reservados |&nbsp
+                </span>
+                <span>
+                    Desenvolvido por &nbsp<a href="https://soniamarasa.github.io/">Sônia
+                        Mara de Sá</a>
+                </span>
+
+            </div>
+        </div>
         <!-- </div> -->
 
     </footer>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
     <script src="/script.js"></script>
+
 
 </body>
 

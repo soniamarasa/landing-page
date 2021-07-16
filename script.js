@@ -4,14 +4,20 @@ const bxDays = document.getElementById('days');
 const bxHours = document.getElementById('hours');
 const bxMinutes = document.getElementById('minutes');
 const bxSeconds = document.getElementById('seconds');
+const inputName = document.getElementById('inputName');
+const inputEmail = document.getElementById('inputEmail');
+
 
 let days, hours, minutes, seconds;
 
 
 window.addEventListener('load', () => { 
 
-    dates()
+    dates();
+    console.log(inputEmail.value);
+    console.log(inputName.value);
 })
+
 
 function dates() {
   let todayIs = document.getElementById('todayIs');
