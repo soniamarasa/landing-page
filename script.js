@@ -11,7 +11,6 @@ const date = new Date('november 26, 2021').getTime();
 let days, hours, minutes, seconds;
 
 window.addEventListener('load', () => {
-  
   dates();
 
   submit.addEventListener('click', (e) => {
@@ -28,6 +27,9 @@ window.addEventListener('load', () => {
 
     cadastro.push(user);
     localStorage.setItem('cadastro', JSON.stringify(cadastro));
+    alert('E-mail cadastrado com sucesso!!!');
+    inputName.value = '';
+    inputEmail.value = '';
   });
 
   setInterval(() => {

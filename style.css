@@ -67,7 +67,7 @@ header img {
 }
 
 #pesquisa::placeholder {
-  color: black;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .btn-pesquisa {
@@ -293,13 +293,26 @@ footer img {
 }
 
 #redesSociais i {
-  color: rgb(248, 175, 86);
+  
   font-size: 3em !important;
+}
+
+#redesSociais a:hover, #whats:hover{
+  color: rgb(248, 175, 86);
+}
+
+@media (max-width: 300px) {
+  html, body {
+    overflow-x: visible !important;
+  }
+  h1 {
+    font-size: 3em;
+  }
 }
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 5em;
+    font-size: 4.5em;
   }
 
   h6 {
@@ -381,7 +394,7 @@ footer img {
   }
 
   #redesSociais i {
-    color: rgb(248, 175, 86);
+
     font-size: 2em !important;
   }
 }
@@ -434,3 +447,4 @@ footer img {
  }
  
 }
+
