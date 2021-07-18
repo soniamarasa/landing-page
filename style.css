@@ -29,12 +29,13 @@ h3 {
 
 html, body {
     height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
   background-color: #121212;
   color: white;
-  overflow-x: hidden;
   /* min-width: 400px; */
   font-family: 'Noto Sans SC', sans-serif;
 }
@@ -135,12 +136,10 @@ a:visited {
 
 .corpo {
   width: 80%;
+  min-height: 65%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 2em;
-  position: relative !important;
-  height: auto !important ;
-  flex: 1 1 0% !important;
 }
 
 #timerT {
@@ -257,22 +256,30 @@ footer img {
   margin-bottom: 1em;
 }
 
-#dBy div {
-  display: flex;
-  justify-content: center;
-}
 
-#dBy a:hover {
+
+#copyright a:hover {
   color: rgb(248, 175, 86);
 }
 
-#dBy {
+#copyright {
   background-color: #000000 !important;
-  display: flex;
-  height: 3em;
+  padding: 0.5em;
+  margin: 0;
+}
+
+#copyright div {
+  display:flex;
+  flex-direction: column;
   align-content: center;
-  word-wrap: break-word;
-  padding: 0 1em;
+}
+
+#copyright div span {
+  text-align: center;
+}
+
+#dBy {
+  font-size: 0.7em;
 }
 
 #fPag {
@@ -340,6 +347,11 @@ footer img {
     display: flex;
     flex-direction: column;
   }
+ 
+
+  /* #copyright {
+    font-size: 0.6em;
+  } */
 }
 
 @media (max-width: 800px) {
@@ -397,4 +409,28 @@ footer img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+
+@media (min-width: 3000px) {
+ .corpo {
+   min-height: 100%;
+   width: 70%;
+ }
+
+ header {
+   display: flex;
+   justify-content: center;
+ }
+ 
+ header div {
+   width: 70%;
+   margin: 0 auto;
+ }
+
+ .footer {
+  width: 70%;
+  margin: 0 auto;
+ }
+ 
 }

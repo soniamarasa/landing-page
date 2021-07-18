@@ -1,23 +1,53 @@
-const date = new Date('november 26, 2021').getTime();
-
 const bxDays = document.getElementById('days');
 const bxHours = document.getElementById('hours');
 const bxMinutes = document.getElementById('minutes');
 const bxSeconds = document.getElementById('seconds');
 const inputName = document.getElementById('inputName');
 const inputEmail = document.getElementById('inputEmail');
+const submit = document.getElementById('submit');
 
+const date = new Date('november 26, 2021').getTime();
 
 let days, hours, minutes, seconds;
 
+window.addEventListener('load', () => {
+  
+  dates();
 
-window.addEventListener('load', () => { 
+  submit.addEventListener('click', (e) => {
+    e.preventDefault();
 
-    dates();
-    console.log(inputEmail.value);
-    console.log(inputName.value);
-})
+    const user = { name: inputName.value, email: inputEmail.value };
+    let cadastro = null;
 
+    if (localStorage.hasOwnProperty('cadastro')) {
+      cadastro = JSON.parse(localStorage.getItem('cadastro'));
+    } else {
+      cadastro = [];
+    }
+
+    cadastro.push(user);
+    localStorage.setItem('cadastro', JSON.stringify(cadastro));
+  });
+
+  setInterval(() => {
+    let currentDate = new Date().getTime();
+    seconds = (date - currentDate) / 1000;
+
+    days = parseInt(seconds / 86400);
+    seconds = seconds % 86400;
+    hours = parseInt(seconds / 3600);
+    seconds = seconds % 3600;
+
+    minutes = parseInt(seconds / 60);
+    seconds = parseInt(seconds % 60);
+
+    bxDays.innerHTML = days;
+    bxHours.innerHTML = hours;
+    bxMinutes.innerHTML = minutes;
+    bxSeconds.innerHTML = seconds;
+  }, 1000);
+});
 
 function dates() {
   let todayIs = document.getElementById('todayIs');
@@ -57,21 +87,3 @@ function dates() {
   todayIs.textContent =
     WeeklyName + ', ' + day + ' de ' + monthName[month] + ' de ' + year;
 }
-
-setInterval(() => {
-  let currentDate = new Date().getTime();
-  seconds = (date - currentDate) / 1000;
-
-  days = parseInt(seconds / 86400);
-  seconds = seconds % 86400;
-  hours = parseInt(seconds / 3600);
-  seconds = seconds % 3600;
-
-  minutes = parseInt(seconds / 60);
-  seconds = parseInt(seconds % 60);
-
-  bxDays.innerHTML = days;
-  bxHours.innerHTML = hours;
-  bxMinutes.innerHTML = minutes;
-  bxSeconds.innerHTML = seconds;
-}, 1000);
