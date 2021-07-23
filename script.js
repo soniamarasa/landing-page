@@ -13,7 +13,7 @@ let days, hours, minutes, seconds;
 window.addEventListener('load', () => {
   dates();
 
-  submit.addEventListener('click', (e) => {
+  submit.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const user = { name: inputName.value, email: inputEmail.value };
