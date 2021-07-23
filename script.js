@@ -4,7 +4,7 @@ const bxMinutes = document.getElementById('minutes');
 const bxSeconds = document.getElementById('seconds');
 const inputName = document.getElementById('inputName');
 const inputEmail = document.getElementById('inputEmail');
-const submit = document.getElementById('submit');
+const formCd = document.getElementById('formCd');
 
 const date = new Date('november 26, 2021').getTime();
 
@@ -13,7 +13,7 @@ let days, hours, minutes, seconds;
 window.addEventListener('load', () => {
   dates();
 
-  submit.addEventListener('click', (e) => {
+  formCd.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const user = { name: inputName.value, email: inputEmail.value };
